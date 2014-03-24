@@ -4,6 +4,43 @@
 \usepackage{ifxetex,ifluatex}
 \usepackage{fixltx2e} % provides \textsubscript
 \usepackage{indentfirst}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead[L]{\leftmark}
+\fancyhead[R]{\rightmark}
+\fancyhead[C]{}
+\fancyfoot[L]{}
+\fancyfoot[R]{}
+\fancyfoot[C]{\thepage}
+\renewcommand{\footrulewidth}{0.4pt}
+
+% Length to control the \fancyheadoffset and the calculation of \headline
+% simultaneously
+\newlength\FHoffset
+\setlength\FHoffset{1cm}
+
+\newlength\FFoffset
+\setlength\FFoffset{1cm}
+
+\addtolength\headwidth{0\FHoffset}
+%\addtolength\footwidth{0\FFoffset}
+
+\fancyheadoffset{\FHoffset}
+\fancyfootoffset{\FFoffset}
+
+% these lengths will control the headrule trimming to the left and right 
+\newlength\FHleft
+\newlength\FHright
+
+\newlength\FFleft
+\newlength\FFright
+
+% here the trimmings are controlled by the user
+\setlength\FHleft{1cm}
+\setlength\FHright{0cm}
+
+\setlength\FFleft{1cm}
+\setlength\FFright{0cm}
 
 % use upquote if available, for straight quotes in verbatim environments
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
@@ -167,6 +204,7 @@ $if(toc)$
 \hypersetup{linkcolor=black}
 \setcounter{tocdepth}{$toc-depth$}
 \tableofcontents
+\newpage
 }
 $endif$
 
