@@ -12,4 +12,5 @@ pandoc ^
 3.6.parser.md ^
 3.7.index.md ^
 3.8.cache.md ^
+3.9.globals.md ^
 --toc --toc-depth=2 --template=cli.tex --latex-engine=xelatex -V geometry:"top=3.5cm, bottom=3.5cm, left=2.5cm, right=2.5cm" -s -o logpresso_cli_manual.pdf
