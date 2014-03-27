@@ -1,8 +1,9 @@
 pandoc ^
-1.1.araqne_core.md ^
-1.2.webserver.md ^
-1.3.license.md ^
-1.4.benchmark.md ^
+1.1.araqne_setup_monitoring.md ^
+1.2.araqne_core.md ^
+1.3.webserver.md ^
+1.4.license.md ^
+1.5.benchmark.md ^
 2.1.client_tools.md ^
 3.1.accounting.md ^
 3.2.query.md ^
