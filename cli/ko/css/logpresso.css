@@ -114,6 +114,14 @@ img {
 }
 
 @media screen and (max-device-width: 480px){
+	body {
+		font-size: 2em;
+	}
+
+	p, li, th, td {
+		font-size: 18pt;
+	}
+	
 	th, td {
 		padding: 4px;
 	}
