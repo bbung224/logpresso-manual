@@ -51,5 +51,6 @@ pandoc ^
 3.1.4.numeric_funcs.md       ^
 3.1.5.date_funcs.md          ^
 3.1.6.ip_funcs.md            ^
+3.1.7.cep_funcs.md           ^
 3.2.0.aggfunction.md         ^
 --toc --toc-depth=3 -c css/logpresso.css -s -o logpresso_query_manual.html
