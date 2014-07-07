@@ -13,6 +13,7 @@ pandoc ^
 2.1.8.table.md               ^
 2.1.9.textfile.md            ^
 2.1.10.zipfile.md            ^
+2.1.11.proc.md               ^
 2.2.0.transform.md           ^
 2.2.1.boxplot.md             ^
 2.2.2.eval.md                ^
@@ -51,6 +52,7 @@ pandoc ^
 3.1.4.numeric_funcs.md       ^
 3.1.5.date_funcs.md          ^
 3.1.6.ip_funcs.md            ^
-3.1.7.cep_funcs.md           ^
+3.1.7.crypto_funcs.md        ^
+3.1.8.cep_funcs.md           ^
 3.2.0.aggfunction.md         ^
 --toc --toc-depth=3 -c css/logpresso.css -s -o logpresso_query_manual.html
