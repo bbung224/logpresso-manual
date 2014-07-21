@@ -44,6 +44,7 @@ pandoc ^
 2.5.1.ftp.md                 ^
 2.5.2.jdbc.md                ^
 2.5.3.hdfs.md                ^
+2.5.4.sftp.md                ^
 3.1.0.function.md            ^
 3.1.1.type_variable_funcs.md ^
 3.1.2.condition_funcs.md     ^
