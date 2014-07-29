@@ -45,4 +45,5 @@ pandoc ^
 9.1.alert_config.md ^
 10.1.excel_external.md ^
 11.1.hdfs_connecter.md ^
+12.1.troubleshooting.md ^
 --toc --toc-depth=2 -s -c css/logpresso.css -o logpresso_cli_manual.html
