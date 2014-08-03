@@ -57,4 +57,4 @@ pandoc \
 3.1.7.crypto_funcs.md        \
 3.1.8.cep_funcs.md           \
 3.2.0.aggfunction.md         \
---toc --toc-depth=3 --template=cli.tex --latex-engine=xelatex -V geometry:"top=3.5cm, bottom=3.5cm, left=2.5cm, right=2.5cm" --variable fontsize=10.5pt -s -o logpresso_query_manual.pdf
+--toc --toc-depth=3 -c css/logpresso.css -s -o logpresso_query_manual.html
