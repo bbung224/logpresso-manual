@@ -1,6 +1,6 @@
 OUTPUTFILE=logpresso_query_manual
 
-MDFILES=$(shell ls -1 [0-9]*.md | sort -t. -k1,1n -k2,2n)
+MDFILES=$(shell ls -1 [0-9]*.md | sort -t. -k1,1n -k2,2n -k3,3n)
 
 all: html pdf
 
