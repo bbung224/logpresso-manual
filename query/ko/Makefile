@@ -14,7 +14,8 @@ pdf: ${OUTPUTFILE}.pdf
 tex: ${OUTPUTFILE}.tex
 
 upload: html
-	scp -r -P${SSH_PORT} ${OUTPUTFILE}.html css/logpresso.css ${SSH_USER_N_HOST}:${REMOTE_DOCROOT}/query/latest/${LOCALE}
+	scp -r -P${SSH_PORT} ${OUTPUTFILE}.html ${SSH_USER_N_HOST}:${REMOTE_DOCROOT}/query/latest/${LOCALE}
+	scp -r -P${SSH_PORT} css ${SSH_USER_N_HOST}:${REMOTE_DOCROOT}/query/latest/${LOCALE}
 
 ${OUTPUTFILE}.html: ${MDFILES}
 	pandoc ${MDFILES} --toc --toc-depth=3 -s -c css/logpresso.css -o $@
