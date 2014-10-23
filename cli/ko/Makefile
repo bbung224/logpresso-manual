@@ -1,6 +1,9 @@
+include server*.mk
+
 OUTPUTFILE=logpresso_cli_manual
 
-MDFILES=$(shell ls -1 [0-9]*.md | sort -t. -k1,1n -k2,2n)
+MDFILES=$(shell ls -1 [0-9]*.md | sort -t. -k1,1n -k2,2n -k3,3n)
+LOCALE=$(shell basename $(realpath .))
 
 all: html pdf
 
@@ -8,12 +11,21 @@ html: ${OUTPUTFILE}.html
 
 pdf: ${OUTPUTFILE}.pdf
 
+tex: ${OUTPUTFILE}.tex
+
+upload: html
+	scp -r -P${SSH_PORT} ${OUTPUTFILE}.html ${SSH_USER_N_HOST}:${REMOTE_DOCROOT}/cli/latest/${LOCALE}
+	scp -r -P${SSH_PORT} css ${SSH_USER_N_HOST}:${REMOTE_DOCROOT}/cli/latest/${LOCALE}
+
 ${OUTPUTFILE}.html: ${MDFILES}
 	pandoc ${MDFILES} --toc --toc-depth=2 -s -c css/logpresso.css -o $@
 
 ${OUTPUTFILE}.pdf: ${MDFILES} cli.tex
 	pandoc ${MDFILES} --toc --toc-depth=2 --template=cli.tex --latex-engine=xelatex -V geometry:"top=3.5cm, bottom=3.5cm, left=2.5cm, right=2.5cm" -s -o $@
 
+${OUTPUTFILE}.tex: ${MDFILES} cli.tex
+	pandoc ${MDFILES} --toc --toc-depth=3 --template=cli.tex --latex-engine=xelatex -V geometry:"top=3.5cm, bottom=3.5cm, left=2.5cm, right=2.5cm" -s -o $@
+
 clean:
-	rm -f logpresso_cli_manual.html
-	rm -f logpresso_cli_manual.pdf
+	rm -f ${OUTPUTFILE}.html
+	rm -f ${OUTPUTFILE}.pdf
