@@ -38,6 +38,7 @@ pandoc ^
 2.2.17.sort.md               ^
 2.2.18.stats.md              ^
 2.2.19.timechart.md          ^
+2.2.20.tojson.md          ^
 2.3.0.load.md                ^
 2.3.1.drop.md                ^
 2.3.2.import.md              ^
