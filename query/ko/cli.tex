@@ -8,6 +8,7 @@
 \usepackage{fixltx2e} % provides \textsubscript
 \usepackage{indentfirst}
 \usepackage{fancyhdr}
+\usepackage{titlesec}
 \pagestyle{fancy}
 \fancyhead[L]{\leftmark}
 \fancyhead[R]{\rightmark}
@@ -16,6 +17,21 @@
 \fancyfoot[R]{}
 \fancyfoot[C]{\thepage}
 \renewcommand{\footrulewidth}{0.4pt}
+
+% titlesec configuration
+\setcounter{secnumdepth}{4}
+\titleformat{\section}
+{\normalfont\Huge\bfseries}{\thesection}{1em}{}
+\titlespacing*{\section} {0pt}{3.5ex plus 1ex minus .2ex}{2.3ex plus .2ex}
+\titleformat{\subsection}
+{\normalfont\Large\bfseries}{\thesubsection}{1em}{}
+\titlespacing*{\subsection} {0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+\titleformat{\subsubsection}
+{\normalfont\large\bfseries}{\thesubsubsection}{1em}{}
+\titlespacing*{\subsubsection}{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{2em}{}
+\titlespacing*{\paragraph} {5pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
 
 % Length to control the \fancyheadoffset and the calculation of \headline
 % simultaneously
