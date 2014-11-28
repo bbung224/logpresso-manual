@@ -51,4 +51,5 @@ pandoc ^
 13.7.apikey.md             ^
 13.8.crypto.md             ^
 13.9.cache.md              ^
---toc --toc-depth=2 --template=user.tex --latex-engine=xelatex -V geometry:"top=3.5cm, bottom=3.5cm, left=2.5cm, right=2.5cm" -s -o logpresso_user_manual.pdf
+13.10.federation.md   ^
+--toc --toc-depth=2 --template=cli.tex --latex-engine=xelatex -V geometry:"top=3.5cm, bottom=3.5cm, left=2.5cm, right=2.5cm" -s -o logpresso_UI_manual.pdf
